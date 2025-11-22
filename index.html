@@ -41,6 +41,13 @@
         .animate-bounce-slow {
             animation: bounce-slow 3s infinite;
         }
+        /* Стили для summary (убираем стандартный треугольник и делаем плавным) */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800">
@@ -94,7 +101,7 @@
                     Помогу вашему ребенку раскрыть <span class="text-sky-500">потенциал</span>
                 </h1>
                 <p class="text-lg text-slate-600 max-w-lg">
-                    Коррекция трудностей обучения и поведения. Сенсомоторная интеграция в зале «Дом Совы». Профессиональная диагностика.
+                    Коррекция трудностей обучения и поведения. Сенсомоторная интеграция в зале «Дом Совы». Нейропсихологическая диагностика.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#contact" class="bg-sky-500 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-sky-600 transition text-center font-semibold shadow-sky-200">
@@ -112,7 +119,7 @@
                 <div class="w-80 h-80 md:w-96 md:h-96 bg-sky-200 rounded-full absolute blur-3xl opacity-40 -top-10 -right-10"></div>
                 <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-200 rounded-full absolute blur-3xl opacity-40 bottom-0 left-10"></div>
                 <!-- ВСТАВЬТЕ ССЫЛКУ НА СВОЕ ФОТО НИЖЕ в src="" -->
-                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ребенок" class="relative rounded-3xl shadow-2xl z-10 object-cover w-full max-w-md h-auto border-4 border-white">
+                <img src="./main.jpg" alt="Ребенок" class="relative rounded-3xl shadow-2xl z-10 object-cover w-full max-w-md h-auto border-4 border-white">
             </div>
         </div>
     </header>
@@ -180,44 +187,90 @@
     <section id="about" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <!-- Левая колонка: Фото и Краткая инфо -->
                 <div class="lg:w-1/2">
                     <div class="bg-white p-2 rounded-3xl shadow-lg transform rotate-1 hover:rotate-0 transition duration-500">
                         <!-- ВСТАВЬТЕ ССЫЛКУ НА СВОЕ ФОТО НИЖЕ в src="" -->
-                        <img src="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ханжина Анна" class="rounded-2xl w-full object-cover h-96">
+                        <img src="./anna.jpg" alt="Ханжина Анна" class="rounded-2xl w-full object-cover h-96">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-slate-800">Ханжина Анна</h3>
-                            <p class="text-sky-600 font-medium">Нейропсихолог, Логопед</p>
-                            <div class="flex items-center gap-2 mt-4 text-sm text-slate-500">
-                                <i data-lucide="award" class="w-4 h-4"></i> Опыт работы: 1–3 года
+                            <p class="text-sky-600 font-medium">Нейропсихолог</p>
+                            
+                            <!-- Статистика -->
+                            <div class="flex gap-6 mt-6 pt-6 border-t border-slate-100">
+                                <div>
+                                    <span class="block text-2xl font-bold text-slate-900">1500+</span>
+                                    <span class="text-sm text-slate-500">Занятий проведено</span>
+                                </div>
+                                <div>
+                                    <span class="block text-2xl font-bold text-slate-900">50+</span>
+                                    <span class="text-sm text-slate-500">Диагностик</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Правая колонка: Описание и Образование -->
                 <div class="lg:w-1/2 space-y-6">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
                         Комплексный подход к развитию
                     </h2>
                     <div class="space-y-4 text-slate-600 leading-relaxed">
                         <p>Добрый день! Я помогаю детям от 2 до 14 лет преодолеть трудности в обучении и поведении.</p>
-                        <p>Занятия проходят в уникальном сенсорно-динамическом зале <strong>«Дом Совы»</strong>.</p>
+                        <p>Занятия проходят в уникальном сенсорно-динамическом зале <strong>«Дом Совы»</strong>, что делает процесс коррекции не только эффективным, но и увлекательным для ребенка.</p>
                     </div>
 
+                    <!-- Блок Образования -->
                     <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                        <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
-                            <i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i>
-                            Образование (2025 г.)
+                        <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                            <i data-lucide="graduation-cap" class="text-sky-500 w-6 h-6"></i>
+                            Образование и квалификация
                         </h4>
-                        <ul class="space-y-3 text-sm text-slate-600">
-                            <li class="flex gap-3">
-                                <div class="min-w-[4px] h-4 mt-1 bg-sky-300 rounded-full"></div>
-                                <span>Сенсомоторная интеграция (НМЦ «Сова-Нянька»)</span>
+                        
+                        <!-- Основное образование -->
+                        <ul class="space-y-4 text-sm text-slate-700 mb-6">
+                            <li class="flex gap-3 items-start">
+                                <div class="min-w-[8px] h-2 mt-2 bg-sky-500 rounded-full"></div>
+                                <div>
+                                    <div class="font-bold text-base">Психология · 2022 г.</div>
+                                    <div class="text-slate-500">Санкт-Петербургский государственный университет (Бакалавриат)</div>
+                                </div>
                             </li>
-                            <li class="flex gap-3">
-                                <div class="min-w-[4px] h-4 mt-1 bg-sky-300 rounded-full"></div>
-                                <span>Нейропсихология (Институт практической нейропсихологии)</span>
+                            <li class="flex gap-3 items-start">
+                                <div class="min-w-[8px] h-2 mt-2 bg-sky-500 rounded-full"></div>
+                                <div>
+                                    <div class="font-bold text-base">Нейропсихология · 2025 г.</div>
+                                    <div class="text-slate-500">Институт практической нейропсихологии и нейрореабилитации</div>
+                                </div>
                             </li>
                         </ul>
+
+                        <!-- Дополнительное образование (Раскрывающееся) -->
+                        <details class="group">
+                            <summary class="flex items-center gap-2 cursor-pointer text-sky-600 font-medium hover:text-sky-700 transition select-none">
+                                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                                Показать дополнительные сертификаты
+                            </summary>
+                            <ul class="space-y-4 text-sm text-slate-600 mt-4 pl-2 border-l-2 border-slate-100 ml-2">
+                                <li class="pl-4">
+                                    <div class="font-semibold text-slate-800">Применение метода сенсомоторной интеграции. Групповая работа · 2025 г.</div>
+                                    <div class="text-xs text-slate-400">НМЦ «Сова-Нянька»</div>
+                                </li>
+                                <li class="pl-4">
+                                    <div class="font-semibold text-slate-800">«Совопрактика. Особая». Коррекционно-развивающая работа · 2025 г.</div>
+                                    <div class="text-xs text-slate-400">НМЦ «Сова-Нянька»</div>
+                                </li>
+                                <li class="pl-4">
+                                    <div class="font-semibold text-slate-800">«Совопрактика. Базовая». Развивающая работа · 2023 г.</div>
+                                    <div class="text-xs text-slate-400">НМЦ «Сова-Нянька»</div>
+                                </li>
+                                <li class="pl-4">
+                                    <div class="font-semibold text-slate-800">Детская нейропсихология: диагностика и коррекция ВПФ · 2022 г.</div>
+                                    <div class="text-xs text-slate-400">АНО НИИДПО</div>
+                                </li>
+                            </ul>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -230,44 +283,69 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-slate-900">Услуги и стоимость</h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                 
                 <!-- Карточка 1 -->
-                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100">
-                    <h3 class="text-xl font-bold mb-2">Диагностика</h3>
-                    <div class="mb-6">
-                        <span class="text-2xl font-bold text-slate-900">3 000 ₽</span>
-                        <span class="text-slate-400 text-sm block">1 ч 45 мин</span>
+                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100 h-full hover:shadow-lg transition">
+                    <!-- Добавлено hyphens-auto для переноса длинных слов -->
+                    <h3 class="text-xl font-bold mb-3 leading-tight hyphens-auto" lang="ru">Нейропсихологическая диагностика</h3>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">
+                        Глубокий анализ высших психических функций: внимания, памяти, мышления, речи. Определение причин трудностей в обучении.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-6">
+                            <span class="text-2xl font-bold text-slate-900">3 000 ₽</span>
+                        </div>
+                        <button onclick="selectService('Диагностика')" class="w-full py-3 rounded-xl border border-slate-300 font-medium hover:border-sky-500 hover:text-sky-600 transition">Выбрать</button>
                     </div>
-                    <button onclick="selectService('Диагностика')" class="w-full py-3 rounded-xl border border-slate-300 font-medium hover:border-sky-500 hover:text-sky-600 transition">Выбрать</button>
                 </div>
 
                 <!-- Карточка 2 -->
-                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100 relative overflow-hidden">
+                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100 relative overflow-hidden h-full hover:shadow-lg transition">
                     <div class="absolute top-0 right-0 bg-sky-500 text-white text-xs px-3 py-1 rounded-bl-xl font-bold">Популярное</div>
-                    <h3 class="text-xl font-bold mb-2">Занятие (50 мин)</h3>
-                    <div class="mb-6">
-                        <span class="text-2xl font-bold text-slate-900">2 500 ₽</span>
+                    <!-- ИЗМЕНЕНО: Заголовок с тире -->
+                    <h3 class="text-xl font-bold mb-3 leading-tight">Занятие — 50 мин</h3>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">
+                        Комплексное коррекционно-развивающее занятие в сенсорно-динамическом зале «Дом Совы».
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-6">
+                            <span class="text-2xl font-bold text-slate-900">2 500 ₽</span>
+                            <!-- ИЗМЕНЕНО: Убрано дублирование времени под ценой -->
+                        </div>
+                        <button onclick="selectService('Занятие 50 мин')" class="w-full py-3 rounded-xl bg-sky-500 text-white font-medium hover:bg-sky-600 transition shadow-md">Выбрать</button>
                     </div>
-                    <button onclick="selectService('Занятие 50 мин')" class="w-full py-3 rounded-xl bg-sky-500 text-white font-medium hover:bg-sky-600 transition shadow-md">Выбрать</button>
                 </div>
 
                 <!-- Карточка 3 -->
-                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100">
-                    <h3 class="text-xl font-bold mb-2">Занятие (30 мин)</h3>
-                    <div class="mb-6">
-                        <span class="text-2xl font-bold text-slate-900">1 500 ₽</span>
+                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100 h-full hover:shadow-lg transition">
+                    <!-- ИЗМЕНЕНО: Заголовок с тире -->
+                    <h3 class="text-xl font-bold mb-3 leading-tight">Занятие — 30 мин</h3>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">
+                        Подходит для самых маленьких детей или при быстрой утомляемости.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-6">
+                            <span class="text-2xl font-bold text-slate-900">1 500 ₽</span>
+                            <!-- ИЗМЕНЕНО: Убрано дублирование времени под ценой -->
+                        </div>
+                        <button onclick="selectService('Занятие 30 мин')" class="w-full py-3 rounded-xl border border-slate-300 font-medium hover:border-sky-500 hover:text-sky-600 transition">Выбрать</button>
                     </div>
-                    <button onclick="selectService('Занятие 30 мин')" class="w-full py-3 rounded-xl border border-slate-300 font-medium hover:border-sky-500 hover:text-sky-600 transition">Выбрать</button>
                 </div>
 
                 <!-- Карточка 4 -->
-                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100">
-                    <h3 class="text-xl font-bold mb-2">Заключение</h3>
-                    <div class="mb-6">
-                        <span class="text-2xl font-bold text-slate-900">1 000 ₽</span>
+                <div class="bg-slate-50 p-8 rounded-3xl flex flex-col border border-slate-100 h-full hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold mb-3 leading-tight">Заключение</h3>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">
+                        Письменный отчет по результатам диагностики с подробным описанием профиля ребенка и рекомендациями.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-6">
+                            <span class="text-2xl font-bold text-slate-900">1 000 ₽</span>
+                            <!-- ИЗМЕНЕНО: Убрано слово "документ" -->
+                        </div>
+                        <button onclick="selectService('Заключение')" class="w-full py-3 rounded-xl border border-slate-300 font-medium hover:border-sky-500 hover:text-sky-600 transition">Выбрать</button>
                     </div>
-                    <button onclick="selectService('Заключение')" class="w-full py-3 rounded-xl border border-slate-300 font-medium hover:border-sky-500 hover:text-sky-600 transition">Выбрать</button>
                 </div>
 
             </div>
@@ -287,9 +365,12 @@
                     
                     <!-- КНОПКИ МЕССЕНДЖЕРОВ (Зеленый WA, Синий TG) -->
                     <div class="flex flex-wrap gap-4">
-                        <!-- Telegram: Синий -->
+                        <!-- Telegram: Синий с фирменной иконкой -->
                         <a href="https://t.me/khanzhina_anya" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-xl transition shadow-lg font-bold">
-                            <i data-lucide="send" class="w-5 h-5 transform -rotate-45 translate-y-0.5"></i> 
+                            <!-- SVG иконка Telegram (фирменный самолетик) -->
+                            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.2646 1.84915C21.8454 1.28291 20.9576 1.13961 20.2764 1.4051L2.34867 8.35623C0.844106 8.94042 0.859663 10.9854 2.37059 11.5492L7.86829 13.6009L20.4636 5.67035C20.7554 5.49079 21.1091 5.80786 20.8601 6.0443L10.5977 15.4208V20.8351C10.5977 21.3752 11.2017 21.6606 11.5901 21.3135L14.3129 18.8247L19.7997 22.949C20.9853 23.8542 22.7291 23.3401 23.1412 21.9011L24 2.14915C24 2.14915 22.2646 1.84915 22.2646 1.84915Z"/>
+                            </svg>
                             Telegram
                         </a>
                         <!-- WhatsApp: Зеленый -->
@@ -326,7 +407,8 @@
                         
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1">Телефон</label>
-                            <input id="form-phone" required type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-300 outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200 transition" placeholder="+7...">
+                            <!-- Добавлен value="+7" -->
+                            <input id="form-phone" required type="tel" value="+7" class="w-full px-4 py-3 rounded-xl border border-slate-300 outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200 transition" placeholder="+7...">
                         </div>
 
                         <div>
@@ -339,7 +421,7 @@
                             </select>
                         </div>
 
-                        <!-- Кнопка формы: Зеленая, так как ведет в WhatsApp -->
+                        <!-- Кнопка формы: Зеленая, иконка заменена на сообщение (message-circle) -->
                         <button type="submit" class="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-500 transition shadow-lg flex items-center justify-center gap-2">
                             <i data-lucide="message-circle" class="w-5 h-5"></i> 
                             Отправить в WhatsApp
